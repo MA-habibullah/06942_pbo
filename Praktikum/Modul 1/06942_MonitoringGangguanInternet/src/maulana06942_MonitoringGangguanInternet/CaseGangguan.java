@@ -1,4 +1,4 @@
-package MonitoringGangguanJaringan;
+package maulana06942_MonitoringGangguanInternet;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -34,12 +34,18 @@ public class CaseGangguan {
                     break;
                 case 2:
                     //EDIT
-                    System.out.print("Input Index = "); Index = input.nextInt();
-                    System.out.print("Nomor Case          = "); NoCase = input.nextInt();
-                    System.out.print("Tanggal(dd/mm/yyyy) = "); Tanggal = new Date(input.next());
-                    System.out.print("Id Pelanggan        = "); IdPelanggan = input.nextInt();
-                    System.out.print("Id Helpdesk         = "); IdHelpdesk = input.nextInt();
-                    System.out.print("Komplain            = "); Komplain = input.next();
+                    System.out.print("Input Index = "); 
+                        Index = input.nextInt();
+                    System.out.print("Nomor Case          = "); 
+                        NoCase = input.nextInt();
+                    System.out.print("Tanggal(dd/mm/yyyy) = "); 
+                        Tanggal = new Date(input.next());
+                    System.out.print("Id Pelanggan        = "); 
+                        IdPelanggan = input.nextInt();
+                    System.out.print("Id Helpdesk         = "); 
+                        IdHelpdesk = input.nextInt();
+                    System.out.print("Komplain            = "); 
+                        Komplain = input.next();
                     ArrayCaseGangguan.set(Index, new CaseGangguanEntity(NoCase, Tanggal, IdPelanggan, IdHelpdesk, Komplain));
                     
                     break;

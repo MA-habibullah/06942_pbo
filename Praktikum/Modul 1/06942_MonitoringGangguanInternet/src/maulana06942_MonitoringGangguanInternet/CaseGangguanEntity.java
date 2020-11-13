@@ -1,4 +1,4 @@
-package MonitoringGangguanJaringan;
+package maulana06942_MonitoringGangguanInternet;
 import java.util.Date;
 
 public class CaseGangguanEntity {

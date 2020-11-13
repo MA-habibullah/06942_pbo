@@ -1,5 +1,5 @@
 
-package MonitoringGangguanJaringan;
+package maulana06942_MonitoringGangguanInternet;
 
 import java.util.ArrayList;
 import java.util.Scanner;

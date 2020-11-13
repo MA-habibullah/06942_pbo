@@ -1,4 +1,4 @@
-package MonitoringGangguanJaringan;
+package maulana06942_MonitoringGangguanInternet;
 
 public class PelangganEntity {
     int IdPelanggan,Kontak;

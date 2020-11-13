@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package MonitoringGangguanJaringan;
+package maulana06942_MonitoringGangguanInternet;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -38,11 +38,16 @@ public class Pelanggan {
                     break;
                 case 2:
                     //EDIT
-                    System.out.print("Input Index = "); Index = input.nextInt();
-                    System.out.print("Id Pelanggan   = "); IdPelanggan = input.nextInt();
-                    System.out.print("Nama Pelanggan = "); NamaPelanggan = input.next();
-                    System.out.print("Kontak         = "); Kontak = input.nextInt();
-                    System.out.print("Alamat         = "); Alamat = input.next();
+                    System.out.print("Input Index = "); 
+                        Index = input.nextInt();
+                    System.out.print("Id Pelanggan   = "); 
+                        IdPelanggan = input.nextInt();
+                    System.out.print("Nama Pelanggan = "); 
+                        NamaPelanggan = input.next();
+                    System.out.print("Kontak         = "); 
+                        Kontak = input.nextInt();
+                    System.out.print("Alamat         = "); 
+                        Alamat = input.next();
                     ArrayPelanggan.set(Index, new PelangganEntity(IdPelanggan, NamaPelanggan, Kontak, Alamat));
                     
                     break;
@@ -79,3 +84,5 @@ public class Pelanggan {
     }
     
 }
+
+

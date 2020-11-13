@@ -1,21 +1,21 @@
-package MonitoringGangguanJaringan;
+package maulana06942_MonitoringGangguanInternet;
 import java.util.Scanner;
 
-public class maulana06942_MonitoringGangguanJaringan { 
+public class maulana06942_MonitoringGangguanInternet { 
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("Selamat Dtang di Aplikasi Monitoring Case Gangguan");
+        System.out.println("Selamat Datang di Aplikasi Monitoring Case Gangguan");
         int Pilihan;
         
-        CaseGangguan CaseGGN = new CaseGangguan();
-        Helpdesk HD = new Helpdesk();
-        Pelanggan PLG = new Pelanggan();
+        CaseGangguan CaseGanggu = new CaseGangguan();
+        Helpdesk HelpD = new Helpdesk();
+        Pelanggan PelG = new Pelanggan();
         
         //Tambahkan Contoh Sample Data
-        HD.TambahSample();
-        PLG.TambahSample();
-        CaseGGN.TambahSample();
+        HelpD.TambahSample();
+        PelG.TambahSample();
+        CaseGanggu.TambahSample();
         //Tambahkan Contoh Sample Data
         
         do{
@@ -26,14 +26,14 @@ public class maulana06942_MonitoringGangguanJaringan {
             System.out.print("Pilihan = "); Pilihan = input.nextInt();
             switch(Pilihan){
                 case 1:
-                    CaseGGN.TampilanMenu();
+                    CaseGanggu.TampilanMenu();
                     break;
                 case 2:
-                    PLG.TampilanMenu();
+                    PelG.TampilanMenu();
                     break;
-                case 3:
-                    HD.TampilanMenu();
-                    break;
+//                case 3:
+//                    HelpD.TampilanMenu();
+//                    break;
                 case 4:
                     System.out.println("Terima Kasih !");
                     break;
