@@ -29,7 +29,7 @@ public class Maulana06942_PelangganModel implements Maulana06942_ModelInterfaces
 		}
 	}
 	public int cekData(String no_id, String password){
-		int loop = 0;
+		int loop = 1;
 		while (!pelangganEntityArrayList.get(loop).getNo_id().equals(no_id)&& !pelangganEntityArrayList.get(loop).getPassword().equals(password)){
 			loop++;
 		}

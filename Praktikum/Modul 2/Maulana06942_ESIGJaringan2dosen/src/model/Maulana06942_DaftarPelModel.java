@@ -4,30 +4,30 @@
  * and open the template in the editor.
  */
 package model;
-import Entity.Maulana06942_DaftarpelEntity;
 import Entity.Maulana06942_PriorityEntity;
+import Entity.Maulana06942_PelangganEntity;
 import java.text.ParseException;
 import java.util.ArrayList;
 
 
 public class Maulana06942_DaftarPelModel implements Maulana06942_ModelInterfaces {
-    private ArrayList<Maulana06942_DaftarpelEntity> daftarpelArrayList;
-    
+    private ArrayList<Maulana06942_PelangganEntity> daftarpelArrayList;
+
 	public Maulana06942_DaftarPelModel(){
-		daftarpelArrayList = new ArrayList<Maulana06942_DaftarpelEntity>();
+		daftarpelArrayList = new ArrayList<Maulana06942_PelangganEntity>();
 	}
-	
-	public void insertDataDaftarpel(Maulana06942_DaftarpelEntity daftarpel){
+
+	public void insertDataDaftarpel(Maulana06942_PelangganEntity daftarpel){
 		daftarpelArrayList.add(daftarpel);
 	}
-	
-	public ArrayList<Maulana06942_DaftarpelEntity> getDaftarpelArrayLits(){
+
+	public ArrayList<Maulana06942_PelangganEntity> getDaftarpelArrayLits(){
 		return daftarpelArrayList;
 	}
-	
+
 	@Override
 	public void view(){
-            for (Maulana06942_DaftarpelEntity daftarpel : daftarpelArrayList){
+            for (Maulana06942_PelangganEntity daftarpel : daftarpelArrayList){
             System.out.println("============================================");
             System.out.print("No ID : "+daftarpel.getpelanggan().getNo_id()+
                     "\n Nama : "+daftarpel.getpelanggan().getNama()+
@@ -37,18 +37,19 @@ public class Maulana06942_DaftarPelModel implements Maulana06942_ModelInterfaces
                     "\n IsVerifed : ");
            //kondisi
             if (daftarpel.isVerified()==false){
-                System.out.println("Belum Di verifikasi Admin");
+                System.out.println("perbaikan Belum Di verifikasi Admin");
             }else {
-                System.out.println("Telah Diverfikasi");
+                System.out.println("perbaikan Diverfikasi");
             }
             System.out.println("====================================================");
             }
 	}
-	
+
 	public int cekdata(String no_id, String password){
 		int loop = 0;
 		if(daftarpelArrayList.isEmpty()){
-			loop =-1;//data kosong
+                    loop=-1;
+                    System.out.println("");
 		}else{
 			for(int i = 0;i<daftarpelArrayList.size(); i++){
 				if(daftarpelArrayList.get(i).getpelanggan().getNo_id().equals(no_id)){
@@ -59,18 +60,18 @@ public class Maulana06942_DaftarPelModel implements Maulana06942_ModelInterfaces
 				}
 			}
 		}return loop;
-	
+
 	}
-	public Maulana06942_DaftarpelEntity showDaftarpel(int index){
+	public Maulana06942_PelangganEntity showDaftarpel(int index){
 		return daftarpelArrayList.get(index);
 	}
-	
-	public void updateIsVerified(int index, Maulana06942_DaftarpelEntity daftarpelEntity){
+
+	public void updateIsVerified(int index, Maulana06942_PelangganEntity daftarpelEntity){
 		daftarpelArrayList.set(index,daftarpelEntity);
 	}
 
     @Override
     public int cekData(String no_id, String password) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }    
+    }
 }

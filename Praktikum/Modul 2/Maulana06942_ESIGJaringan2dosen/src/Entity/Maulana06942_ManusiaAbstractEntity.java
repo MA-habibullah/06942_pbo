@@ -5,19 +5,19 @@
  */
 package Entity;
 
-public abstract class Maulana06942_PelangganAbstractEntity {
+public abstract class Maulana06942_ManusiaAbstractEntity {
 
     public String no_id;
     public String password;
     public String nama;
     protected String no_telp, IDpel;
-	public Maulana06942_PelangganAbstractEntity(String no_id, String password, String nama, String no_telp, String IDpel){
+	public Maulana06942_ManusiaAbstractEntity(String no_id, String password, String nama, String no_telp){
 		this.no_id = no_id;
 		this.password = password;
 		this.nama = nama;
 		this.no_telp = no_telp;
 	}
-	public Maulana06942_PelangganAbstractEntity(){
+	public Maulana06942_ManusiaAbstractEntity(){
 	}
 
 	public abstract String getNo_id();

@@ -5,9 +5,8 @@
  */
 package maulana06942_ESIGJaringan;
 import Entity.Maulana06942_PriorityEntity;
-import Entity.Maulana06942_PelangganEntity;
 import Entity.Maulana06942_TeknisiEntity;
-import Entity.Maulana06942_DaftarpelEntity;
+import Entity.Maulana06942_PelangganEntity;
 import Entity.*;
 import java.util.Scanner;
 import model.Maulana06942_TeknisiModel;
@@ -85,13 +84,13 @@ public class maulana06942_main {
 		System.out.print("Password : ");
 		String password = input.next();
 		cekpelanggan = pelangganModel.cekData(no_id,password);
-		System.out.println("selamat datang" + pelangganModel.getPelEntityArrayList(cekpriority).getNama());
+		System.out.println("selamat datang " + pelangganModel.getPelEntityArrayList(cekpriority).getNama());
 		int cekPriority = daftarpelModel.cekdata(no_id, password);
 		if(cekPriority==-1){
-			System.out.println("Anda Belum Daftar Pratikum");
+			System.out.println("perbaikan belum di veifikasi");
 			daftarpel();
 		}else if(cekPriority==-2){
-			System.out.println("Anda Belum Daftar Pratikum");
+			System.out.println("perbaikan belum di veifikasi");
 			daftarpel();
 		}else{
 			System.out.println("Nama = "+daftarpelModel.showDaftarpel(cekPriority).getpelanggan().getNama());
@@ -107,9 +106,9 @@ public class maulana06942_main {
                     for(int i=0;i<Maulana06942_PriorityEntity.priority.length;i++){
 			System.out.println(i+". " +Maulana06942_PriorityEntity.priority[i]);
 		}
-		System.out.print("Pilih Praktikum = ");
+		System.out.print("Pilih Pelanggan = ");
 		pilpel = input.nextInt();
-                    daftarpelModel.insertDataDaftarpel(new Maulana06942_DaftarpelEntity(pilpel,pelangganModel.getPelEntityArrayList(cekpriority),false));
+                    daftarpelModel.insertDataDaftarpel(new Maulana06942_PelangganEntity(pilpel,pelangganModel.getPelEntityArrayList(cekpriority),false));
 	}
 	static void loginTeknisi(){
 		System.out.print("No ID : ");
@@ -122,9 +121,9 @@ public class maulana06942_main {
 		updateIsverified();
 	}
 	static void updateIsverified(){
-		System.out.print("NO ID Praktikan = ");
+		System.out.print("\nNO ID Pelanggan = ");
 		String no_id=input.next();
 		int index = daftarpelModel.cekdata(no_id,null);
-		daftarpelModel.updateIsVerified (index, new Maulana06942_DaftarpelEntity(pilpel,pelangganModel.getPelEntityArrayList(index),true));
+		daftarpelModel.updateIsVerified (index, new Maulana06942_PelangganEntity(pilpel,pelangganModel.getPelEntityArrayList(index),true));
 	}
 }  
